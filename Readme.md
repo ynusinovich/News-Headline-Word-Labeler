@@ -41,7 +41,7 @@ Parts-of-speech: "CC": "Coordinating Conjunction",<br>
                  "WP$": "Possessive Whpronoun",<br>
                  "WRB": "Whadverb"<br>
                  "$": "$",<br>
-                 "/*": "/*"<br>
+                 "/*": "/*"<br><br>
 Named entities: "geo": "Geographical Entity",<br>
                 "org": "Organization",<br>
                 "per": "Person",<br>
@@ -50,7 +50,7 @@ Named entities: "geo": "Geographical Entity",<br>
                 "art": "Artifact",<br>
                 "eve": "Event",<br>
                 "nat": "Natural Phenomenon",<br>
-                "O": "Not a Named Entity"<br>
+                "O": "Not a Named Entity"<br><br>
 Chunks: "B": "Begin Chunk",<br>
         "I": "Inside Chunk",<br>
         "O": "Not a Named Entity"
@@ -58,18 +58,24 @@ Chunks: "B": "Begin Chunk",<br>
 ## Instructions:
 
 1. Clone this project to a local directory.
-2. In the Terminal, navigate to this project directory.
-3. Set up the virtual environment.
+2. Create a subfolder of the main project directory called "data".
+3. Download the GloVe 6-billion-word 200-dimensional word vector file to the "data" subfolder from https://www.kaggle.com/incorpes/glove6b200d/download.
+4. Download the "ner_dataset.csv" (the smaller of the two datasets) from https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus?select=ner_dataset.csv into the "data" subfolder.
+5. In the Terminal, navigate to the main project directory.
+6. Set up the virtual environment.
   - Sample terminal commands to set up the environment:
     - python3 -m venv ./test_env/
     - source ./test_env/bin/activate
     - pip3 install -r requirements.txt
-4. Run the program, providing an input news headline in quotes (if the news headline contains quotation marks, add a \ before each one.).
-  - Example terminal command with a made-up news headline containing a word from outside the model's vocabulary:
+7. Run the training code.
+  - Example terminal command:
+    - python3 MTL-with-NLP-Example-Training-Code.py
+8. Run the testing code, typing -s followed by an input news headline sentence in quotes (if the news headline contains quotation marks, add a \ before each one).
+  - Example terminal command with a made-up news headline:
     - python3 MTL-with-NLP-Example-Testing-Code.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
   - Another example terminal command with quotation marks:
     - python3 MTL-with-NLP-Testing-Code.py -s "This \\"isn't real\\" news."
-5. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
+9. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
 
 ## Code References:
 
