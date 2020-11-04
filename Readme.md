@@ -4,55 +4,55 @@ The goal of this project was create a multi-task learning neural network that ca
 
 ## Explanation of linguistic terms:
 
-Parts-of-speech: "CC": "Coordinating Conjunction",
-                 "CD": "Cardinal Number",
-                 "DT": "Determiner",
-                 "EX": "Existential There",
-                 "FW": "Foreign Word",
-                 "IN": "Prepositon or Subordinating Conjunction",
-                 "JJ": "Adjective",
-                 "JJR": "Adjective, Comparative",
-                 "JJS": "Adjective, Superlative",
-                 "LS": "List Item Marker",
-                 "MD": "Modal",
-                 "NN": "Noun, Singular or Mass",
-                 "NNS": "Noun, Plural",
-                 "NNP": "Proper Noun, Singular",
-                 "NNPS": "Proper Noun, Plural",
-                 "PDT": "Predeterminer",
-                 "POS": "Possessive Ending",
-                 "PRP": "Personal Pronoun",
-                 "PRP$": "Possessive Pronoun",
-                 "RB": "Adverb",
-                 "RBR": "Adverb, Comparative",
-                 "RBS": "Adverb, Superlative",
-                 "PR": "Particle",
-                 "SYM": "Symbol",
-                 "TO": "To",
-                 "UH": "Interjection",
-                 "VB": "Verb, Base Form",
-                 "VBD": "Verb, Past Tense",
-                 "VBG": "Verb, Gerund or Present Pariciple",
-                 "VBN": "Verb, Past Participle",
-                 "VBP": "Verb, Non-3rd Person Singular Present",
-                 "VBZ": "Verb, 3rd Person Singular Present",
-                 "WDT": "Whdeterminer",
-                 "WP": "Whpronoun",
-                 "WP$": "Possessive Whpronoun",
-                 "WRB": "Whadverb"
-                 "$": "$",
-                 "*": "*"
-Named entities: "geo": "Geographical Entity",
-                "org": "Organization",
-                "per": "Person",
-                "gpe": "Geopolitical Entity",
-                "tim": "Time Indicator",
-                "art": "Artifact",
-                "eve": "Event",
-                "nat": "Natural Phenomenon",
-                "O": "Not a Named Entity"
-Chunks: "B": "Begin Chunk",
-        "I": "Inside Chunk",
+Parts-of-speech: "CC": "Coordinating Conjunction",<br>
+                 "CD": "Cardinal Number",<br>
+                 "DT": "Determiner",<br>
+                 "EX": "Existential There",<br>
+                 "FW": "Foreign Word",<br>
+                 "IN": "Prepositon or Subordinating Conjunction",<br>
+                 "JJ": "Adjective",<br>
+                 "JJR": "Adjective, Comparative",<br>
+                 "JJS": "Adjective, Superlative",<br>
+                 "LS": "List Item Marker",<br>
+                 "MD": "Modal",<br>
+                 "NN": "Noun, Singular or Mass",<br>
+                 "NNS": "Noun, Plural",<br>
+                 "NNP": "Proper Noun, Singular",<br>
+                 "NNPS": "Proper Noun, Plural",<br>
+                 "PDT": "Predeterminer",<br>
+                 "POS": "Possessive Ending",<br>
+                 "PRP": "Personal Pronoun",<br>
+                 "PRP$": "Possessive Pronoun",<br>
+                 "RB": "Adverb",<br>
+                 "RBR": "Adverb, Comparative",<br>
+                 "RBS": "Adverb, Superlative",<br>
+                 "PR": "Particle",<br>
+                 "SYM": "Symbol",<br>
+                 "TO": "To",<br>
+                 "UH": "Interjection",<br>
+                 "VB": "Verb, Base Form",<br>
+                 "VBD": "Verb, Past Tense",<br>
+                 "VBG": "Verb, Gerund or Present Pariciple",<br>
+                 "VBN": "Verb, Past Participle",<br>
+                 "VBP": "Verb, Non-3rd Person Singular Present",<br>
+                 "VBZ": "Verb, 3rd Person Singular Present",<br>
+                 "WDT": "Whdeterminer",<br>
+                 "WP": "Whpronoun",<br>
+                 "WP$": "Possessive Whpronoun",<br>
+                 "WRB": "Whadverb"<br>
+                 "$": "$",<br>
+                 "/*": "/*"<br>
+Named entities: "geo": "Geographical Entity",<br>
+                "org": "Organization",<br>
+                "per": "Person",<br>
+                "gpe": "Geopolitical Entity",<br>
+                "tim": "Time Indicator",<br>
+                "art": "Artifact",<br>
+                "eve": "Event",<br>
+                "nat": "Natural Phenomenon",<br>
+                "O": "Not a Named Entity"<br>
+Chunks: "B": "Begin Chunk",<br>
+        "I": "Inside Chunk",<br>
         "O": "Not a Named Entity"
 
 ## Instructions:
@@ -68,7 +68,7 @@ Chunks: "B": "Begin Chunk",
   - Example terminal command with a made-up news headline containing a word from outside the model's vocabulary:
     - python3 MTL-with-NLP-Example-Testing-Code.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
   - Another example terminal command with quotation marks:
-    - python3 MTL-with-NLP-Testing-Code.py -s "This \"isn't real\" news."
+    - python3 MTL-with-NLP-Testing-Code.py -s "This \\"isn't real\\" news."
 5. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
 
 ## Code References:
