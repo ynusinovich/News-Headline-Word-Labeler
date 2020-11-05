@@ -2,7 +2,7 @@
 
 The goal of this project was create a multi-task learning neural network that can predict part-of-speech, named entity, and chunk for each word in a news headline. This project is an addendum to my presentation for A.I. Socratic Circles (https://ai.science/) about the seminal natural language processing paper: "A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning" by Ronan Collobert and Jason Weston. This neural network accomplishes the first three tasks in the paper, as a demonstration for the presentation.
 
-## Explanation of linguistic terms:
+## Explanation of Linguistic Terms
 
 Parts-of-speech:<br>
 - "CC": "Coordinating Conjunction"<br>
@@ -60,7 +60,7 @@ Chunks:<br>
 - "I": "Inside Chunk"<br>
 - "O": "Not a Named Entity"
 
-## Instructions:
+## Instructions
 
 1. Clone this project to a local directory.
     - Sample terminal command to clone the repository:
@@ -84,7 +84,7 @@ Chunks:<br>
         - python3 News_Headline_Labels.py -s "This \\"isn't real\\" news."
 9. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
 
-## Code References:
+## Code References
 
 https://keras.io/examples/nlp/pretrained_word_embeddings/<br>
 https://github.com/rahul-pande/faces-mtl/blob/master/faces_mtl_age_gender.ipynb<br>
@@ -93,7 +93,7 @@ https://medium.com/illuin/named-entity-recognition-with-bilstm-cnns-632ba83d3d41
 https://github.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/blob/master/nn.py<br>
 https://nlpforhackers.io/lstm-pos-tagger-keras/
 
-## Data Source and Part-of-Speech Reference:
+## Data Source and Part-of-Speech Reference
 
 https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus<br>
 https://m-clark.github.io/text-analysis-with-R/part-of-speech-tagging.html<br>
