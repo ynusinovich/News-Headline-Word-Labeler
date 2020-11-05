@@ -43,6 +43,7 @@ Parts-of-speech:<br>
 - "WRB": "Whadverb"<br>
 - 'LRB': "Left Parentheses"<br>
 - 'RRB': "Right Parentheses"<br><br>
+
 Named entities:<br>
 - "geo": "Geographical Entity"<br>
 - "org": "Organization"<br>
@@ -53,6 +54,7 @@ Named entities:<br>
 - "eve": "Event"<br>
 - "nat": "Natural Phenomenon"<br>
 - "O": "Not a Named Entity"<br><br>
+
 Chunks:<br>
 - "B": "Begin Chunk"<br>
 - "I": "Inside Chunk"<br>
