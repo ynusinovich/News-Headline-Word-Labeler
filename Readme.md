@@ -5,57 +5,58 @@ The goal of this project was create a multi-task learning neural network that ca
 ## Explanation of linguistic terms:
 
 Parts-of-speech:<br>
-"CC": "Coordinating Conjunction",<br>
-"CD": "Cardinal Number",<br>
-"DT": "Determiner",<br>
-"EX": "Existential There",<br>
-"FW": "Foreign Word",<br>
-"IN": "Prepositon or Subordinating Conjunction",<br>
-"JJ": "Adjective",<br>
-"JJR": "Adjective, Comparative",<br>
-"JJS": "Adjective, Superlative",<br>
-"LS": "List Item Marker",<br>
-"MD": "Modal",<br>
-"NN": "Noun, Singular or Mass",<br>
-"NNS": "Noun, Plural",<br>
-"NNP": "Proper Noun, Singular",<br>
-"NNPS": "Proper Noun, Plural",<br>
-"PDT": "Predeterminer",<br>
-"POS": "Possessive Ending",<br>
-"PRP": "Personal Pronoun",<br>
-"PRP$": "Possessive Pronoun",<br>
-"RB": "Adverb",<br>
-"RBR": "Adverb, Comparative",<br>
-"RBS": "Adverb, Superlative",<br>
-"PR": "Particle",<br>
-"SYM": "Symbol",<br>
-"TO": "To",<br>
-"UH": "Interjection",<br>
-"VB": "Verb, Base Form",<br>
-"VBD": "Verb, Past Tense",<br>
-"VBG": "Verb, Gerund or Present Pariciple",<br>
-"VBN": "Verb, Past Participle",<br>
-"VBP": "Verb, Non-3rd Person Singular Present",<br>
-"VBZ": "Verb, 3rd Person Singular Present",<br>
-"WDT": "Whdeterminer",<br>
-"WP": "Whpronoun",<br>
-"WP$": "Possessive Whpronoun",<br>
-"WRB": "Whadverb"<br>
-"$": "$"<br><br>
+- "CC": "Coordinating Conjunction"<br>
+- "CD": "Cardinal Number"<br>
+- "DT": "Determiner"<br>
+- "EX": "Existential There"<br>
+- "FW": "Foreign Word"<br>
+- "IN": "Prepositon or Subordinating Conjunction"<br>
+- "JJ": "Adjective"<br>
+- "JJR": "Adjective, Comparative"<br>
+- "JJS": "Adjective, Superlative"<br>
+- "LS": "List Item Marker"<br>
+- "MD": "Modal"<br>
+- "NN": "Noun, Singular or Mass"<br>
+- "NNS": "Noun, Plural"<br>
+- "NNP": "Proper Noun, Singular"<br>
+- "NNPS": "Proper Noun, Plural"<br>
+- "PDT": "Predeterminer"<br>
+- "POS": "Possessive Ending"<br>
+- "PRP": "Personal Pronoun"<br>
+- "PRP$": "Possessive Pronoun"<br>
+- "RB": "Adverb"<br>
+- "RBR": "Adverb, Comparative"<br>
+- "RBS": "Adverb, Superlative"<br>
+- "RP": "Particle"<br>
+- "SYM": "Symbol"<br>
+- "TO": "To"<br>
+- "UH": "Interjection"<br>
+- "VB": "Verb, Base Form"<br>
+- "VBD": "Verb, Past Tense"<br>
+- "VBG": "Verb, Gerund or Present Pariciple"<br>
+- "VBN": "Verb, Past Participle"<br>
+- "VBP": "Verb, Non-3rd Person Singular Present"<br>
+- "VBZ": "Verb, 3rd Person Singular Present"<br>
+- "WDT": "Whdeterminer"<br>
+- "WP": "Whpronoun"<br>
+- "WP$": "Possessive Whpronoun"<br>
+- "WRB": "Whadverb"<br>
+- 'LRB': "Left Parentheses"<br>
+- 'RRB': "Right Parentheses"<br><br>
 Named entities:<br>
-"geo": "Geographical Entity",<br>
-"org": "Organization",<br>
-"per": "Person",<br>
-"gpe": "Geopolitical Entity",<br>
-"tim": "Time Indicator",<br>
-"art": "Artifact",<br>
-"eve": "Event",<br>
-"nat": "Natural Phenomenon",<br>
-"O": "Not a Named Entity"<br><br>
+- "geo": "Geographical Entity"<br>
+- "org": "Organization"<br>
+- "per": "Person"<br>
+- "gpe": "Geopolitical Entity"<br>
+- "tim": "Time Indicator"<br>
+- "art": "Artifact"<br>
+- "eve": "Event"<br>
+- "nat": "Natural Phenomenon"<br>
+- "O": "Not a Named Entity"<br><br>
 Chunks:<br>
-"B": "Begin Chunk",<br>
-"I": "Inside Chunk",<br>
-"O": "Not a Named Entity"
+- "B": "Begin Chunk"<br>
+- "I": "Inside Chunk"<br>
+- "O": "Not a Named Entity"
 
 ## Instructions:
 
@@ -73,12 +74,12 @@ Chunks:<br>
         - pip3 install -r requirements.txt
 7. Run the training code.
     - Sample terminal command:
-        - python3 MTL-with-NLP-Training-Code.py
+        - python3 Training.py
 8. Run the testing code, typing -s followed by an input news headline sentence in quotes (if the news headline contains quotation marks, add a \ before each one).
     - Example terminal command with a made-up news headline:
-        - python3 MTL-with-NLP-Testing-Code.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
+        - python3 News_Headline_Labels.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
     - Another example terminal command with quotation marks:
-        - python3 MTL-with-NLP-Testing-Code.py -s "This \\"isn't real\\" news."
+        - python3 News_Headline_Labels.py -s "This \\"isn't real\\" news."
 9. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
 
 ## Code References:
@@ -93,4 +94,5 @@ https://nlpforhackers.io/lstm-pos-tagger-keras/
 ## Data Source and Part-of-Speech Reference:
 
 https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus<br>
-https://m-clark.github.io/text-analysis-with-R/part-of-speech-tagging.html
+https://m-clark.github.io/text-analysis-with-R/part-of-speech-tagging.html<br>
+https://www.eecis.udel.edu/~vijay/cis889/ie/pos-set.pdf

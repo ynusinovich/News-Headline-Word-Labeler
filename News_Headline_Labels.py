@@ -15,6 +15,10 @@ import string
 import re
 import argparse
 
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
 # Take Input from User in Terminal
 
 ap = argparse.ArgumentParser()
@@ -49,11 +53,9 @@ model = load_model(args["model_path"], compile = False)
 input_sentence = args["sentence"]
 
 sentence_array = input_sentence.split(" ")
-while("" in sentence_array): 
-    sentence_array.remove("")
-sentence_length = len(sentence_array)
-while("." in sentence_array): 
-    sentence_array.remove(".")
+for i in string.punctuation:
+    while(i in sentence_array): 
+        sentence_array.remove(i)
 sentence_length = len(sentence_array)
 
 prob_pos, prob_ner, prob_chu = model.predict(
@@ -81,7 +83,7 @@ chu_list = chu_list[0][0:sentence_length]
 pos_dict = {"CC": "Coordinating Conjunction",
             "CD": "Cardinal Number",
             "DT": "Determiner",
-            "EX": "Existential There",
+            "EX": "Existencial There",
             "FW": "Foreign Word",
             "IN": "Prepositon or Subordinating Conjunction",
             "JJ": "Adjective",
@@ -100,7 +102,7 @@ pos_dict = {"CC": "Coordinating Conjunction",
             "RB": "Adverb",
             "RBR": "Adverb, Comparative",
             "RBS": "Adverb, Superlative",
-            "PR": "Particle",
+            "RP": "Particle",
             "SYM": "Symbol",
             "TO": "To",
             "UH": "Interjection",
@@ -115,7 +117,14 @@ pos_dict = {"CC": "Coordinating Conjunction",
             "WP$": "Possessive Whpronoun",
             "WRB": "Whadverb",
             "$": "$",
-            "*": "*"}
+            "*": "*",
+            ',': ',', 
+            '.': '.', 
+            ':': ':', 
+            ';': ';',
+            '``': '``',
+            'LRB': "Left Parentheses",
+            'RRB': "Right Parentheses"}
 
 ner_dict = {"geo": "Geographical Entity",
             "org": "Organization",
@@ -125,20 +134,22 @@ ner_dict = {"geo": "Geographical Entity",
             "art": "Artifact",
             "eve": "Event",
             "nat": "Natural Phenomenon",
-            "O": "Not a Named Entity"}
+            "O": "Not a Named Entity",
+            "*": "*"}
 
 chu_dict = {"B": "Begin Chunk",
             "I": "Inside Chunk",
-            "O": "Not a Named Entity"}
+            "O": "Not a Named Entity",
+            "*": "*"}
 
 indices = np.arange(0, len(sentence_array))
-results = pd.DataFrame(columns = ["Word", "Part-of-Speech", "Named Entity", "Beginning or Inside Chunk"],
+results = pd.DataFrame(columns = ["-Word-", "-Part-of-Speech-", "-Named Entity-", "-Beginning or Inside Chunk-"],
                        index = indices)
 for i in results.index:
-    results.loc[i, "Word"] = sentence_array[i]
-    results.loc[i, "Part-of-Speech"] = pos_dict[pos_list[i]]
-    results.loc[i, "Named Entity"] = ner_dict[ner_list[i]]
-    results.loc[i, "Beginning or Inside Chunk"] = chu_dict[chu_list[i]]
+    results.loc[i, "-Word-"] = sentence_array[i]
+    results.loc[i, "-Part-of-Speech-"] = pos_dict[pos_list[i]]
+    results.loc[i, "-Named Entity-"] = ner_dict[ner_list[i]]
+    results.loc[i, "-Beginning or Inside Chunk-"] = chu_dict[chu_list[i]]
 print(results)
 
 
