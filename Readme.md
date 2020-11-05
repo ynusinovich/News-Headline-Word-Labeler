@@ -41,7 +41,7 @@ Parts-of-speech: "CC": "Coordinating Conjunction",<br>
                  "WP$": "Possessive Whpronoun",<br>
                  "WRB": "Whadverb"<br>
                  "$": "$",<br>
-                 "/*": "/*"<br><br>
+                 "\*": "\*"<br><br>
 Named entities: "geo": "Geographical Entity",<br>
                 "org": "Organization",<br>
                 "per": "Person",<br>
