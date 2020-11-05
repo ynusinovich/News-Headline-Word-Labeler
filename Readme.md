@@ -73,10 +73,10 @@ Chunks:<br>
         - pip3 install -r requirements.txt
 7. Run the training code.
     - Sample terminal command:
-        - python3 MTL-with-NLP-Example-Training-Code.py
+        - python3 MTL-with-NLP-Training-Code.py
 8. Run the testing code, typing -s followed by an input news headline sentence in quotes (if the news headline contains quotation marks, add a \ before each one).
     - Example terminal command with a made-up news headline:
-        - python3 MTL-with-NLP-Example-Testing-Code.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
+        - python3 MTL-with-NLP-Testing-Code.py -s "The North Sentinelese petitioned India's Department of Environmental Health to improve water quality in the Indian Ocean."
     - Another example terminal command with quotation marks:
         - python3 MTL-with-NLP-Testing-Code.py -s "This \\"isn't real\\" news."
 9. Additional optional parameters to run the program are -m, -p, -n, and -c: the file paths to the (1) model, (2) part-of-speech label encoder, (3) named entity recognition label encoder, and (4) chunking label encoder. The paths must be included if these files are not located in the default relative path from my project.
