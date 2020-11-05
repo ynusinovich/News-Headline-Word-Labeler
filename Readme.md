@@ -58,17 +58,19 @@ Chunks: "B": "Begin Chunk",<br>
 ## Instructions:
 
 1. Clone this project to a local directory.
+  - Sample terminal command to clone the repository:
+    - git clone https://github.com/ynusinovich/Multitask-Learning-with-Natural-Language-Processing.git
 2. Create a subfolder of the main project directory called "data".
 3. Download the GloVe 6-billion-word 200-dimensional word vector file to the "data" subfolder from https://www.kaggle.com/incorpes/glove6b200d/download.
 4. Download the "ner_dataset.csv" (the smaller of the two datasets) from https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus?select=ner_dataset.csv into the "data" subfolder.
 5. In the Terminal, navigate to the main project directory.
 6. Set up the virtual environment.
-  - Sample terminal commands to set up the environment:
+  - Sample terminal commands to set up the environment (I use "python3" and "pip3" in the commands because my system python is python2):
     - python3 -m venv ./test_env/
     - source ./test_env/bin/activate
     - pip3 install -r requirements.txt
 7. Run the training code.
-  - Example terminal command:
+  - Sample terminal command:
     - python3 MTL-with-NLP-Example-Training-Code.py
 8. Run the testing code, typing -s followed by an input news headline sentence in quotes (if the news headline contains quotation marks, add a \ before each one).
   - Example terminal command with a made-up news headline:
