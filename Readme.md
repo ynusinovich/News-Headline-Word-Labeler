@@ -1,4 +1,4 @@
-# Multitask Learning with Natural Language Processing
+# News Headline Word Labeler
 
 The goal of this project was create a multi-task learning neural network that can predict part-of-speech, named entity, and chunk for each word in a news headline. This project is an addendum to my presentation for A.I. Socratic Circles (https://ai.science/) about the seminal natural language processing paper: "A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning" by Ronan Collobert and Jason Weston. This neural network accomplishes the first three tasks in the paper, as a demonstration for the presentation.
 
