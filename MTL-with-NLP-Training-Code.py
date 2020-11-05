@@ -21,27 +21,27 @@ df = pd.read_csv("./data/ner_dataset.csv", encoding = 'unicode_escape')
 
 # Create Training and Test Datasets
 
-# for i in np.arange(0, len(df) - 1):
-#     if pd.isnull(df.loc[i + 1, "Sentence #"]):
-#         df.loc[i + 1, "Sentence #"] = df.loc[i, "Sentence #"]
+for i in np.arange(0, len(df) - 1):
+    if pd.isnull(df.loc[i + 1, "Sentence #"]):
+        df.loc[i + 1, "Sentence #"] = df.loc[i, "Sentence #"]
 
-# sentence_number_values = []
-# for i in np.arange(0, len(df)):
-#     sentence_number_values.append(int(df.loc[i, "Sentence #"].split()[1]))
-# df["Sentence # Val"] = sentence_number_values
+sentence_number_values = []
+for i in np.arange(0, len(df)):
+    sentence_number_values.append(int(df.loc[i, "Sentence #"].split()[1]))
+df["Sentence # Val"] = sentence_number_values
 
-# number_of_train_sentences = math.floor(47959 * .8)
-# train_sentences_numbers = set(np.random.choice(47959, number_of_train_sentences, replace = False))
+number_of_train_sentences = math.floor(47959 * .8)
+train_sentences_numbers = set(np.random.choice(47959, number_of_train_sentences, replace = False))
 
-# test_sentences_numbers = set(df["Sentence # Val"]) - train_sentences_numbers
+test_sentences_numbers = set(df["Sentence # Val"]) - train_sentences_numbers
 
-# df.drop(columns = ["Sentence #"], inplace = True)
+df.drop(columns = ["Sentence #"], inplace = True)
 
-# train_df = df.loc[df["Sentence # Val"].isin(train_sentences_numbers)]
-# test_df = df.loc[df["Sentence # Val"].isin(test_sentences_numbers)]
+train_df = df.loc[df["Sentence # Val"].isin(train_sentences_numbers)]
+test_df = df.loc[df["Sentence # Val"].isin(test_sentences_numbers)]
 
-# train_df.to_csv("./data/ner_train_dataset.csv", index = False)
-# test_df.to_csv("./data/ner_test_dataset.csv", index = False)
+train_df.to_csv("./data/ner_train_dataset.csv", index = False)
+test_df.to_csv("./data/ner_test_dataset.csv", index = False)
 
 
 # Load Training and Test Datasets After Creation
