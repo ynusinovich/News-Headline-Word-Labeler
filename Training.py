@@ -208,7 +208,7 @@ glove_dir = './data/'
 path_to_glove_file = os.path.join(glove_dir, 'glove.6B.200d.txt')
 
 embeddings_index = {}
-with open(path_to_glove_file) as f:
+with open(path_to_glove_file, encoding = "utf-8") as f:
     for line in f:
         word, coefs = line.split(maxsplit = 1)
         coefs = np.fromstring(coefs, "f", sep = " ")
