@@ -93,8 +93,7 @@ https://medium.com/illuin/named-entity-recognition-with-bilstm-cnns-632ba83d3d41
 https://github.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/blob/master/nn.py<br>
 https://nlpforhackers.io/lstm-pos-tagger-keras/
 
-## Data Source and Part-of-Speech Reference
+## Data Source and Part-of-Speech References
 
 https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus<br>
-https://m-clark.github.io/text-analysis-with-R/part-of-speech-tagging.html<br>
 https://www.eecis.udel.edu/~vijay/cis889/ie/pos-set.pdf
