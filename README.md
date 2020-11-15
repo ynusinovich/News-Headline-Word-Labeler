@@ -10,7 +10,7 @@ Parts-of-speech:<br>
 - "DT": "Determiner"<br>
 - "EX": "Existential There"<br>
 - "FW": "Foreign Word"<br>
-- "IN": "Prepositon or Subordinating Conjunction"<br>
+- "IN": "Preposition or Subordinating Conjunction"<br>
 - "JJ": "Adjective"<br>
 - "JJR": "Adjective, Comparative"<br>
 - "JJS": "Adjective, Superlative"<br>
